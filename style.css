@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+}
+
+/* center everything */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* card container */
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 350px;
+}
+
+/* title */
+h1 {
+  text-align: center;
+}
+
+/* input + button row */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* input */
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* add button */
+#addBtn {
+  padding: 10px 15px;
+  border: none;
+  background-color: #2d89ef;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#addBtn:hover {
+  background-color: #1b5fbf;
+}
+
+/* task item */
+li {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 8px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* enter animation state */
+li.new {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* exit animation state */
+li.removing {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+/* checkbox */
+li input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/* text */
+li span {
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+/* completed state */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* clear button */
+#clearBtn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#clearBtn:hover {
+  background-color: #c0392b;
+}
